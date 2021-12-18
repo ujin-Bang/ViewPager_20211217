@@ -9,6 +9,7 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var mvpa: MainViewPagerAdapter
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -25,5 +26,9 @@ class MainActivity : AppCompatActivity() {
         mvpa = MainViewPagerAdapter(supportFragmentManager)
         mainViewPager.adapter = mvpa
 
+        mainTabLayout.setupWithViewPager(mainViewPager)
+
     }
+
+
 }
